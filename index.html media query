@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  /* --- 1. THE PARENT STYLE (Default) --- */
+  /* This applies to the HTML always, unless overridden */
+  body {
+    font-family: sans-serif;
+    text-align: center;
+  }
+
+  .my-box {
+    background-color: lightblue; /* Default is Blue */
+    padding: 50px;
+    border: 2px solid navy;
+    font-size: 20px;
+  }
+
+  /* --- 2. THE MEDIA QUERY --- */
+  /* This targets the EXACT SAME class (.my-box) */
+  /* But it only runs if the screen is 600px or smaller */
+  
+  @media (max-width: 600px) {
+    .my-box {
+      background-color: coral; /* Overrides Blue to Coral */
+      color: white;
+      border: 5px dashed white;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <h2>Resize your browser window!</h2>
+  <p>Wider than 600px = Blue.</p>
+  <p>Smaller than 600px = Coral.</p>
+
+  <div class="my-box">
+    I am the box content
+  </div>
+
+</body>
+</html>
